@@ -1,3 +1,5 @@
 # Project
 
-Progress Bar
+Progress Bar classi observer + tests
+
+manca gui
