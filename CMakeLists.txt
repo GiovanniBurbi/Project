@@ -12,4 +12,5 @@ add_library(core ${SOURCE_FILES})
 
 find_package(wxWidgets REQUIRED net gl core base)
 include(${wxWidgets_USE_FILE})
-target_link_libraries(Progetto core ${wxWidgets_LIBRARIES})
+target_link_libraries(Progetto ${wxWidgets_LIBRARIES})
+

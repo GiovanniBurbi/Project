@@ -12,15 +12,14 @@
 class Downloader : public Subject {
 
 public:
-private:
 
     virtual void subscribe(Observer *o) override;
     virtual void unsubscribe(Observer *o) override;
     virtual void notify() override;
 
-    void downloadFile();
+    void downloadFiles();
     void addFile(std::string file);
-    int getNumFiles() const;
+    unsigned long int getNumFiles() const;
 
 
 private:

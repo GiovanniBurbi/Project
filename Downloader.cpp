@@ -20,7 +20,7 @@ void Downloader::notify() {
 
 }
 
-void Downloader::downloadFile() {
+void Downloader::downloadFiles() {
     notify();
     files.pop_front();
 }
@@ -30,6 +30,6 @@ void Downloader::addFile(std::string file) {
 
 }
 
-int Downloader::getNumFiles() const {
+unsigned long int Downloader::getNumFiles() const {
     return files.size();
 }

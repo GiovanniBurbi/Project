@@ -4,13 +4,19 @@
 #include <gtest/gtest.h>
 #include "../Downloader.h"
 
-TEST(addtests,listdownloadfiles){
-    //crea oggetto e fai verifiche
-    //ASSERT_EQ();
+
+TEST(Downloader, TestaddFiles){
+    Downloader dload;
+    dload.addFile("testfile");
+    dload.addFile("testfile2");
+    ASSERT_EQ(2, dload.getNumFiles());
 }
 
-TEST(downloadfiles,listdownloadfiles){
-    //fai
-}
+TEST(Downloader, TestDownload){
+    Downloader dload;
+    dload.addFile("testfile");
+    dload.downloadFiles();
+    ASSERT_EQ(0, dload.getNumFiles());
 
+}
 

@@ -7,13 +7,24 @@
 
 
 #include "Observer.h"
+#include "Downloader.h"
 
 class GuiDownloader : public Observer {
 
 public:
 
+    GuiDownloader(Downloader* s) : subject(s) {
+        subject->subscribe(this);
+    }
+
+    virtual ~GuiDownloader(){
+        subject->unsubscribe(this);
+    }
+
     virtual void update() override;
 
+private:
+    Downloader* subject;
 };
 
 
